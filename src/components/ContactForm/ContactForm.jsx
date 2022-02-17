@@ -1,7 +1,8 @@
+
 import { useState } from "react"
 import { addContact } from "../../redux/actions";
 import { connect } from "react-redux";
-const ContactForm = onSubmit => {
+const ContactForm = ({onSubmit}) => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
   const handleSubmit = event => {
@@ -41,7 +42,9 @@ const ContactForm = onSubmit => {
 }
 
 const mapDispatchToProps = dispatch => ({
-  onSubmit: (name, number) => dispatch(addContact(name, number)),
+  onSubmit: (name, number) => {
+    dispatch(addContact(name, number))
+  },
 });
 
 export default connect(null, mapDispatchToProps)(ContactForm);
