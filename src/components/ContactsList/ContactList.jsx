@@ -1,21 +1,22 @@
 import {  } from "../../redux/actions";
 import { connect } from "react-redux";
 import { deleteContact } from "../../redux/actions";
+import { Contacts, ContactItem } from "./ContactList.styled";
 const ContactsList = ({ contacts, query, onDeleteContact }) => {
   const filteredContacts = () => {
      return contacts.filter((contact) => contact.name.toLowerCase().includes(query))
   }
   return (
-    <ul>
+    <Contacts>
       {(query === '' ? contacts : filteredContacts()).map(({ name, id, number }) => (
-      <li key={id}>
+      <ContactItem key={id}>
         {name}:<span>{number}</span>
       <button onClick={() => onDeleteContact(id)}>
         Delete
       </button>
-      </li>
+      </ContactItem>
       ))}
-    </ul>
+    </Contacts>
   );
 };
 

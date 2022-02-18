@@ -2,6 +2,7 @@
 import { useState } from "react"
 import { addContact } from "../../redux/actions";
 import { connect } from "react-redux";
+import { Form, Input } from "./ContactForm.styled";
 const ContactForm = ({onSubmit}) => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
@@ -14,9 +15,9 @@ const ContactForm = ({onSubmit}) => {
     setName('');
     setNumber('');
   }
-    return <form onSubmit={handleSubmit}>
+    return <Form onSubmit={handleSubmit}>
       <label htmlFor="name">Name</label>
-      <input
+      <Input
         type="text"
         name="name"
         pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -27,7 +28,7 @@ const ContactForm = ({onSubmit}) => {
         value={name}
         />
         <label htmlFor="number">Number</label>
-      <input
+      <Input
         type="tel"
         name="number"
         pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
@@ -38,7 +39,7 @@ const ContactForm = ({onSubmit}) => {
         value={number}
       />
       <button type="submit">Add contact</button>
-    </form>
+    </Form>
 }
 
 const mapDispatchToProps = dispatch => ({

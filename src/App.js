@@ -1,12 +1,12 @@
-import { ContactForm, ContactList, Filter } from "./components/index"
+import { ContactForm, ContactList, Filter, Section } from "./components/index"
 
 export const App =()=> {
   return (
-    <div className="App">
+    <Section>
       <ContactForm />
       <Filter/>
       <ContactList/>
-    </div>
+    </Section>
   );
 }
 

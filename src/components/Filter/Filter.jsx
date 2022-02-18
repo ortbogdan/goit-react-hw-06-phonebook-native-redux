@@ -1,8 +1,9 @@
 import { changeFilter } from "../../redux/actions";
 import { connect } from "react-redux";
+import { FilterWrapper } from "./Filter.styled";
 const Filter = ({ onChange, filter }) => {
   return (
-    <div>
+    <FilterWrapper>
       <label htmlFor="filter">Find contacts by name</label>
       <input
         type="text"
@@ -11,7 +12,7 @@ const Filter = ({ onChange, filter }) => {
         onChange={onChange}
         value={filter}
       ></input>
-    </div>
+    </FilterWrapper>
   );
 };
 
