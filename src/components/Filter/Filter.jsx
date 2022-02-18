@@ -17,7 +17,7 @@ const Filter = ({ onChange, filter }) => {
 
 const mapDispatchToProps = dispatch => ({
   onChange: e => {
-    dispatch(changeFilter(e.target.value.trim().toLowerCase()))
+    dispatch(changeFilter(e.target.value.trim().toLowerCase()));
   },
 });
 

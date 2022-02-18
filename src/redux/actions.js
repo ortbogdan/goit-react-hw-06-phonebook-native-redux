@@ -19,4 +19,5 @@ export const deleteContact = id => ({
 export const changeFilter = filter => ({
     type: actionsTypes.CHANGE_FILTER,
     payload: {query: filter}
-  });
+});
+
