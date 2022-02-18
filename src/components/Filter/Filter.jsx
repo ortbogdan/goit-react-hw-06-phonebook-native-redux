@@ -22,7 +22,7 @@ const mapDispatchToProps = dispatch => ({
 });
 
 const mapStateToProps = state => ({
-   filter: state
+   filter: state.contacts.filter
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Filter);

@@ -17,7 +17,7 @@ const ContactsList = ({ contacts, onDeleteContact }) => {
 };
 
 const mapStateToProps = state => ({
-   contacts: state
+   contacts: state.contacts.items
 })
 
 const mapDispatchToProps = dispatch => ({

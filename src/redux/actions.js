@@ -13,10 +13,10 @@ export const addContact = (name, number) => ({
 
 export const deleteContact = id => ({
     type: actionsTypes.DELETE_CONTACT,
-    payload: id
+    payload: { id }
 })
 
 export const changeFilter = filter => ({
     type: actionsTypes.CHANGE_FILTER,
-    payload: filter
+    payload: {query: filter}
   });
