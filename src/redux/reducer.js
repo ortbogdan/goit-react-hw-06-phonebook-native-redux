@@ -26,7 +26,7 @@ const itemsReducer = (state=[], { type, payload }) => {
     }
 }
 
-const filterReduser = (state='', { type, payload }) => {
+const filterReducer = (state='', { type, payload }) => {
     switch (type) {
         case actionsTypes.CHANGE_FILTER:
             return payload.query;
@@ -38,5 +38,5 @@ const filterReduser = (state='', { type, payload }) => {
 
 export default combineReducers({
         items: itemsReducer,
-        filter: filterReduser
+        filter: filterReducer
 })

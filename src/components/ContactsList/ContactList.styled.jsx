@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Contacts = styled.ul`
   width: 300px;
+  padding: 0;
   margin: 0;
   display: flex;
   flex-direction: column;
